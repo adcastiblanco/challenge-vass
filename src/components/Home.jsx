@@ -33,6 +33,14 @@ function Home() {
           Swal.close();
           setUserData(data);
           setShowUser(true);
+        })
+        .catch((err) => {
+          Swal.fire({
+            icon: "error",
+            title: "Ha ocurrido un error inesperado, intentalo de nuevo.",
+            showConfirmButton: false,
+            timer: 2000,
+          });
         });
     }
   };

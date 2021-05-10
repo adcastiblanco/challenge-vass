@@ -46,6 +46,14 @@ function Login() {
             timer: 2000,
           });
         }
+      })
+      .catch((err) => {
+        Swal.fire({
+          icon: "error",
+          title: "Ha ocurrido un error inesperado, intentalo de nuevo.",
+          showConfirmButton: false,
+          timer: 2000,
+        });
       });
   };
 
